@@ -25,7 +25,8 @@ const Sidebar = () => {
         <>
           <div className="flex justify-between items-center">
             <Link to="/" onClick={handleCloseSideBar} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
-              <AiFillCaretLeft /> <span>adapt</span>
+              <AiFillCaretLeft />
+              <span>OrangeHRM</span>
             </Link>
             <TooltipComponent content="Menu" position="BottomCenter">
               <button
@@ -41,9 +42,6 @@ const Sidebar = () => {
           <div className="mt-10 ">
             {links.map((item) => (
               <div key={item.title}>
-                <p className="text-gray-400 dark:text-gray-400 m-3 mt-4 uppercase">
-                  {item.title}
-                </p>
                 {item.links.map((link) => (
                   <NavLink
                     to={`/${link.name}`}
